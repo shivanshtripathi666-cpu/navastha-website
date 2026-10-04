@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 250 248 243;
+  --surface: 255 255 255;
+  --fg: 22 30 25;
+  --muted: 84 98 89;
+  --line: 223 227 218;
+  --brand: 20 83 45;
+  --on-brand: 255 255 255;
+}
+.dark {
+  --bg: 14 19 16;
+  --surface: 22 30 26;
+  --fg: 238 243 236;
+  --muted: 162 176 166;
+  --line: 40 53 46;
+  --brand: 74 190 120;
+  --on-brand: 8 22 13;
+}
+
+html { scroll-behavior: smooth; color-scheme: light; }
+html.dark { color-scheme: dark; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  @apply bg-bg font-sans text-fg antialiased;
+}
+section[id] { scroll-margin-top: 4.5rem; }
+:focus-visible { outline: 2px solid rgb(var(--brand)); outline-offset: 3px; border-radius: 6px; }
+.theme-anim, .theme-anim * {
+  transition: background-color .3s ease, color .3s ease, border-color .3s ease !important;
+}
+.grid-fade {
+  background-image:
+    linear-gradient(rgb(var(--line) / .6) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--line) / .6) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at 60% 30%, #000 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at 60% 30%, #000 20%, transparent 70%);
+}
