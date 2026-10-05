@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Armchair, Search, Sparkles, Users } from 'lucide-react'
-import { LeafMark } from './Brand'
+import { LogoMark } from './Brand'
 
 const chips = [
   { icon: Search, label: 'Find a study space', pos: 'left-0 top-[8%]', delay: 0 },
@@ -64,9 +64,13 @@ export default function Hero() {
             animate={{ rotate: 360 }}
             transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
           />
-          <div className="absolute inset-[38%] flex items-center justify-center rounded-full border border-line bg-surface shadow-xl shadow-brand/20">
-            <LeafMark className="h-1/2 w-1/2 text-brand" />
-          </div>
+          <motion.div
+            className="absolute inset-[34%] rounded-[22%] shadow-2xl shadow-[#f0c86e]/25"
+            animate={{ opacity: [0.9, 1, 0.9] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+          >
+            <LogoMark className="h-full w-full" />
+          </motion.div>
           {chips.map(({ icon: Icon, label, pos, delay }) => (
             <motion.div
               key={label}
