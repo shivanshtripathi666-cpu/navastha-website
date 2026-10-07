@@ -65,11 +65,11 @@ export default function Hero() {
             transition={{ duration: 90, repeat: Infinity, ease: 'linear' }}
           />
           <motion.div
-            className="absolute inset-[34%] rounded-[22%] shadow-2xl shadow-[#f0c86e]/25"
+            className="absolute inset-[34%] rounded-[29%] shadow-2xl shadow-[#8fe03a]/30"
             animate={{ opacity: [0.9, 1, 0.9] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <LogoMark className="h-full w-full" />
+            <LogoMark large className="h-full w-full" />
           </motion.div>
           {chips.map(({ icon: Icon, label, pos, delay }) => (
             <motion.div
