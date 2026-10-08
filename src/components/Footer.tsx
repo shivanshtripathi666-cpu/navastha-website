@@ -1,4 +1,5 @@
 import Brand from './Brand'
+import { SUPPORT_EMAIL } from '../config'
 
 const links = [
   ['Home', '#home'],
@@ -6,8 +7,12 @@ const links = [
   ['Libraries', '#libraries'],
   ['Features', '#features'],
   ['About', '#about'],
+  ['FAQ', '#faq'],
   ['Contact', '#contact'],
+  ['Support', './support.html'],
   ['Privacy', './privacy.html'],
+  ['Terms', './terms.html'],
+  ['Delete account', './delete-account.html'],
 ] as const
 
 export default function Footer() {
@@ -17,6 +22,12 @@ export default function Footer() {
         <div>
           <Brand />
           <p className="mt-3 text-muted">A New State of Focus.</p>
+          <a
+            href={`mailto:${SUPPORT_EMAIL}`}
+            className="mt-2 inline-block text-sm text-muted underline-offset-4 transition hover:text-fg hover:underline"
+          >
+            {SUPPORT_EMAIL}
+          </a>
         </div>
         <nav aria-label="Footer">
           <ul className="grid grid-cols-2 gap-x-10 gap-y-2 sm:grid-cols-3">

@@ -9,6 +9,7 @@ import AppPreview from './components/AppPreview'
 import WhyNavastha from './components/WhyNavastha'
 import ComingSoon from './components/ComingSoon'
 import About from './components/About'
+import Faq from './components/Faq'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -33,6 +34,7 @@ export default function App() {
         <WhyNavastha />
         <ComingSoon />
         <About />
+        <Faq />
         <Contact />
       </main>
       <Footer />

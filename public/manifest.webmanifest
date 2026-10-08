@@ -1,0 +1,21 @@
+{
+  "name": "Navastha",
+  "short_name": "Navastha",
+  "description": "A New State of Focus.",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#0e1310",
+  "theme_color": "#0a3d1c",
+  "icons": [
+    {
+      "src": "logo-150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
